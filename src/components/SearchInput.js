@@ -19,14 +19,16 @@ const SearchInput = () =>{
 
     return (
         <>
-            <div className="mb-4 flex flex-col content-center items-center">
-                <input className="h-12 text-xl text-gray-800 lg:w-1/3 md:w-2/3 xs:w-full px-4 rounded-md border border-green-600 mb-4" 
+            <div className="mx-2 mb-4 text-gray-800 flex flex-col content-center items-center">
+                <input className="h-12 text-xl lg:w-1/3 md:w-2/3 xs:w-full px-4 rounded-md border border-green-600 mb-4" 
                         placeholder="Your word here, only letters"
                         name="q" 
                         value={word} 
                         onChange={handleChange} 
                         type="text"/>
-                {elements.length>0? elements.map((arrayOfElements)=><ElementContainer arrayOfElements={arrayOfElements}/>): !word.length>0? "Try writing something":"That word can't be formed using elements. Why don't you try something else?"}
+                <div>
+                    {elements.length>0? elements.map((arrayOfElements)=><ElementContainer key={arrayOfElements.join()} arrayOfElements={arrayOfElements}/>): !word.length>0? "Try writing something":"That word can't be formed using elements. Why don't you try something else?"}
+                </div>
             </div>
         </>)
 }
