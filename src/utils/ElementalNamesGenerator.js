@@ -35,7 +35,7 @@ function elementalForms(word) {
    if(!word){return []}
    word = word.toLowerCase()
    let result = getCombinationsOfElementsForWord(word, findElementsInWord(word))
-   return result.map((array)=>array.map((symbol)=>`${ ELEMENTS[symbol] } (${ symbol })`))
+   return result.map((array)=>array.map((symbol)=>[ELEMENTS[symbol], symbol]))
 }
 
 export default elementalForms

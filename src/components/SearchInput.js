@@ -14,8 +14,12 @@ const SearchInput = () =>{
 
     return (
         <>
-        <input value={word} onChange={handleChange} type="text"/>
-        {elements.map((array)=>array.map((element)=><ElementContainer element={element}/>))}
+            <div className="mb-4">
+                <input className="h-12 text-2xl text-gray-800 px-4 rounded-md border border-green-600"  value={word} onChange={handleChange} type="text"/>  
+            </div>
+            <div>
+                {elements.length>0? elements.map((arrayOfElements)=><ElementContainer arrayOfElements={arrayOfElements}/>): "Try typing something"}
+            </div>  
         </>)
 }
 

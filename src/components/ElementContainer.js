@@ -1,8 +1,11 @@
 import React from 'react'
+import SquareBox from './SquareBox'
 
-const ElementContainer = ({element}) =>{
+const ElementContainer = ({arrayOfElements}) =>{
     return (
-        <div>{element}</div>
+        <div className="flex justify-center my-8 flex-wrap">
+            {arrayOfElements.map((element)=><SquareBox element={element}/>)}
+        </div>
     )
 }
 

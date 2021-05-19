@@ -1,12 +1,11 @@
-import './App.css';
 import SearchInput from './components/SearchInput'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App min-h-screen flex justify-center items-center flex-col">
       <header className="App-header">
-        <SearchInput></SearchInput>
       </header>
+      <SearchInput></SearchInput>
     </div>
   );
 }
