@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import elementalForms from '../utils/ElementalNamesGenerator'
+import ElementContainer from './ElementContainer'
 
 const SearchInput = () =>{
     const [word, setWord] = useState('')
@@ -14,7 +15,7 @@ const SearchInput = () =>{
     return (
         <>
         <input value={word} onChange={handleChange} type="text"/>
-        {elements.map((array)=>array.map((element)=><p key={element}>{element}</p>))}
+        {elements.map((array)=>array.map((element)=><ElementContainer element={element}/>))}
         </>)
 }
 
