@@ -20,7 +20,7 @@ const SearchInput = () =>{
     return (
         <>
             <div className="mx-2 mb-4 text-gray-800 flex flex-col content-center items-center">
-                <input className="h-12 text-xl lg:w-1/3 md:w-2/3 xs:w-full px-4 rounded-md border border-green-600 mb-4" 
+                <input className="h-12 text-xl lg:w-1/3 md:w-2/3 xs:w-full px-4 rounded-md border border-green-600 focus:outline-none mb-4" 
                         placeholder="Your word here, only letters"
                         name="q" 
                         value={word} 
