@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* TailwindCSS 3 has this class available, but TailwindCSS 2 doesn't */
+.min-h-screen {
+    min-height: 100vh;
+}

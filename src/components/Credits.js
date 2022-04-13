@@ -1,16 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Credits = () =>{
-    const [openCredits, toggleOpenCredits] = useState(false)
-
-    const toggleCredits = () => {
-        toggleOpenCredits(!openCredits)
-    }
+const Credits = () => {
 
     return (
-        <div onClick={toggleCredits} 
-            className={"px-4 py-2 transform fixed bottom-0 -left-40 bg-gradient-to-r from-red-400 to-red-500 font-bold transition duration-700 whitespace-nowrap overflow-hidden text-sm" + (openCredits? " translate-x-40 text-white" : " text-red-500")}>
-            Credits: <a href="https://coffeebytes.dev">Eduardo Zepeda</a> 
+        <div
+            className={"absolute bottom-0 text-gray-700 left-0 p-4"}>
+            <p><small>Credits: <a href="https://eduardozepeda.dev">Eduardo Zepeda</a></small></p>
         </div>
     )
 }
