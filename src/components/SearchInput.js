@@ -6,7 +6,6 @@ import Tip from './Tip'
 const SearchInput = () => {
     const [word, setWord] = useState('')
     const [elements, setElements] = useState([])
-
     const removeNumbersAndSpecialCharacters = (word) => {
         return word.replace(/[^a-zA-Z]/g, '')
     }
@@ -30,7 +29,8 @@ const SearchInput = () => {
                         type="text" />
                 </form>
                 <div>
-                    {elements.length > 0 ? elements.map((arrayOfElements) => <ElementContainer key={arrayOfElements.join()} arrayOfElements={arrayOfElements} />) : !word.length > 0 ? "Try writing something" : <Tip />}
+                    {elements.length > 0 ? elements.map((arrayOfElements) => <ElementContainer key={arrayOfElements.join()} arrayOfElements={arrayOfElements} />) : !word.length > 0 ?
+                        "Try writing something" : <Tip />}
                 </div>
             </div>
         </>)

@@ -10,11 +10,12 @@ const Tip = () => {
         "How about 'agnostic'?",
         "'hallucination' is a complicated word",
         "Did you know that some elements are named after famous scientists, planets, or mythological figures?",
-        "According to Richard Feynman the number 137 defines the table's outer limit"
+        "According to Richard Feynman the number 137 defines the table's outer limit",
+        "Have you considered that the periodic table is a giant cheatsheet?",
     ]
 
     return (
-        <div className="">{tips[~~(Math.random() * tips.length)]}</div>
+        <div className="bg-green-500 py-2 px-4 text-white rounded-sm">Tip: {tips[~~(Math.random() * tips.length)]}</div>
     )
 }
 
