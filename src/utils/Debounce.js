@@ -1,0 +1,9 @@
+const debounce = (callback, tiempoDeEspera) => {
+    let timeout
+    return (...args) => {
+        clearTimeout(timeout)
+        timeout = setTimeout(() => callback(...args), tiempoDeEspera)
+    }
+}
+
+export default debounce

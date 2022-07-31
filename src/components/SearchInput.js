@@ -16,12 +16,11 @@ const SearchInput = () => {
         if (cleanedWord) { setElements(elementalForms(cleanedWord)) } else { setWord(''); setElements([]) }
 
     }
-
     return (
         <>
             <div className="mx-2 mb-4 text-gray-800 flex flex-col content-center items-center">
-                <form autocomplete="off">
-                    <input autocomplete="false" className="h-12 text-xl xs:w-full px-4 rounded-md border border-green-600 focus:outline-none mb-4"
+                <form autoComplete="off">
+                    <input autoComplete="false" className="h-12 text-xl xs:w-full px-4 rounded-md border border-green-600 focus:outline-none mb-4"
                         placeholder="Your word here, only letters"
                         name="q"
                         value={word}
@@ -29,7 +28,7 @@ const SearchInput = () => {
                         type="text" />
                 </form>
                 <div>
-                    {elements.length > 0 ? elements.map((arrayOfElements) => <ElementContainer key={arrayOfElements.join()} arrayOfElements={arrayOfElements} />) : !word.length > 0 ?
+                    {elements.length > 0 ? elements.map((arrayOfElements) => <ElementContainer key={arrayOfElements.map((element) => element.name).join()} arrayOfElements={arrayOfElements} />) : !word.length > 0 ?
                         "Try writing something" : <Tip />}
                 </div>
             </div>

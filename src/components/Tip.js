@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const Tip = () => {
+const Tip = ({ newTip }) => {
 
     const tips = [
         "Did you know that the letter 'J' doesn't exist in the IUPAC periodic table?",
@@ -19,4 +19,4 @@ const Tip = () => {
     )
 }
 
-export default Tip
+export default memo(Tip)
