@@ -27,7 +27,7 @@ const SearchInput = () => {
                         onChange={handleChange}
                         type="text" />
                 </form>
-                <div>
+                <div className="py-8">
                     {elements.length > 0 ? elements.map((arrayOfElements) => <ElementContainer key={arrayOfElements.map((element) => element.name).join()} arrayOfElements={arrayOfElements} />) : !word.length > 0 ?
                         "Try writing something" : <Tip />}
                 </div>

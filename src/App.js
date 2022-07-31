@@ -1,3 +1,4 @@
+import React from 'react'
 import Credits from './components/Credits'
 import { BrowserRouter } from "react-router-dom";
 import Main from './components/Main';

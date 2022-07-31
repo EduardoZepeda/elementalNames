@@ -9,15 +9,15 @@ function ElementDetail() {
     const element = ELEMENTS[elementId]
 
     return (
-        <div className="App min-h-1/2 text-gray-800 px-4 flex flex-row flex-wrap justify-center items-center">
-            <div key={element.id} className="relative flex justify-center items-center flex-col text-white text-lg bg-green-400 rounded-sm shadow-md w-64 h-64 m-8 p-8 max-w-screen-sm">
+        <div className="App min-h-1/2 text-gray-800 px-4 flex flex-col flex-wrap justify-center items-center p-8">
+            <div key={element.id} className="relative flex justify-center items-center flex-col text-white text-lg bg-green-400 rounded-sm shadow-md w-64 h-64 m-8 p-8">
                 <div className="text-7xl">{element.symbol}</div>
                 <div className="text-2xl">{element.name}</div>
                 <div className="text-sm absolute bottom-4 text-xl">{element.electron_configuration_semantic}</div>
                 <div className="absolute top-4 right-4 text-xl">{element.atomic_mass}</div>
                 <div className="absolute top-4 left-4 text-xl">{element.number}</div>
             </div>
-            <div key={element.id} className="mx-8">
+            <div key={element.id} className="mx-8 max-w-md">
                 {element.summary ? <div>{element.summary}</div> : null}
                 {element.appearance ? <div><strong>Appareance: </strong> {element.appearance}</div> : null}
                 {element.bohr_model_image ? <div><strong>Bohr Model: </strong><img alt={`${element.symbol} bohr model`} src={element.bohr_model_image} /> </div> : null}
